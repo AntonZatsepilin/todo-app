@@ -1,19 +1,28 @@
 package handler
 
-import "github.com/gin-gonic/gin"
+import (
+	"TODO-APP/pkg/service"
+
+	"github.com/gin-gonic/gin"
+)
 
 type Handler struct {
+	services *service.Service
+}
+
+func NewHandler(services *service.Service) *Handler {
+	return &Handler{services: services}
 }
 
 func (h *Handler) InitRoutes() *gin.Engine {
-	router := gin.New()
+	router := gin.New() //Создает новый маршрутизатор Gin.
 
-	auth := router.Group("/auth")
+	auth := router.Group("/auth") //Создает группу маршрутов для аутентификации. Группа /auth будет использоваться для всех маршрутов, связанных с аутентификацией.
 	{
-		auth.POST("/sign-up", h.signUp)
+		auth.POST("/sign-up", h.signUp) //Определяет маршрут POST /sign-up в группе /auth и связывает его с методом signUp, который находится в экземпляре структуры Handler (полученного в качестве параметра функции).
 		auth.POST("/sign-in", h.signIn)
 	}
-	api := router.Group("/api")
+	api := router.Group("/api") //Создает группу маршрутов для API. Группа /api будет использоваться для всех маршрутов, связанных с API.
 	{
 		lists := api.Group("/lists")
 		{
