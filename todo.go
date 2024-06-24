@@ -8,7 +8,7 @@ type TodoList struct {
 
 type UserList struct {
 	Id     int
-	IserId int
+	UserId int
 	ListId int
 }
 
