@@ -4,6 +4,15 @@ import (
 	"fmt"
 
 	"github.com/jmoiron/sqlx"
+	_ "github.com/lib/pq"
+)
+
+const (
+	userTable       = "users"
+	todoListsTable  = "todo_lists"
+	usersListsTable = "user_lists"
+	todoItemsTable  = "todo_items"
+	listsItemTable  = "listd_items"
 )
 
 type Config struct {
