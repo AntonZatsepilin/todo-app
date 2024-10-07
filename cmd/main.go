@@ -21,7 +21,7 @@ func main() {
 		logrus.Fatalf("error init configs: %s", err.Error())
 	}
 
-	if err := godotenv.Load("/Users/anton/Desktop/GitHub/todo-app/.env"); err != nil {
+	if err := godotenv.Load(".env"); err != nil {
 		logrus.Fatalf("error loading env variables: %s", err.Error())
 	}
 

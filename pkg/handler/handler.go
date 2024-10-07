@@ -15,14 +15,14 @@ func NewHandler(services *service.Service) *Handler {
 }
 
 func (h *Handler) InitRoutes() *gin.Engine {
-	router := gin.New() //Создает новый маршрутизатор Gin.
+	router := gin.New()
 
-	auth := router.Group("/auth") //Создает группу маршрутов для аутентификации. Группа /auth будет использоваться для всех маршрутов, связанных с аутентификацией.
+	auth := router.Group("/auth")
 	{
-		auth.POST("/sign-up", h.signUp) //Определяет маршрут POST /sign-up в группе /auth и связывает его с методом signUp, который находится в экземпляре структуры Handler (полученного в качестве параметра функции).
+		auth.POST("/sign-up", h.signUp)
 		auth.POST("/sign-in", h.signIn)
 	}
-	api := router.Group("/api") //Создает группу маршрутов для API. Группа /api будет использоваться для всех маршрутов, связанных с API.
+	api := router.Group("/api")
 	{
 		lists := api.Group("/lists")
 		{
