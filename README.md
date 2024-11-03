@@ -11,7 +11,7 @@ This project is a REST API for managing todo lists. It is written in Go and uses
 <details>
   <summary>Entity-relationship diagram</summary>
   <p align="center">
-    <img src=![Снимок экрана 2024-11-03 в 14 44 15](https://github.com/user-attachments/assets/25fea2ec-c29e-40fd-92e5-012dd419648b)
+    <img src=https://github.com/user-attachments/assets/25fea2ec-c29e-40fd-92e5-012dd419648b
  width=50% />
   </p>
 </details>
