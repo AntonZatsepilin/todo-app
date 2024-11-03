@@ -7,7 +7,7 @@ services:
       dockerfile: Dockerfile
     container_name: todo-app
     ports:
-      - "8080:8080"
+      - "8080:8000"
     depends_on:
       db:
         condition: service_healthy
