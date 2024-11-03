@@ -1,9 +1,10 @@
 package service
 
 import (
-	"TODO-APP/pkg/repository"
 	"crypto/sha1"
 	"fmt"
+
+	"github.com/AntonZatsepilin/todo-app/pkg/repository"
 
 	"github.com/AntonZatsepilin/todo-app/internal/models"
 )

@@ -2,7 +2,6 @@ package repository
 
 import (
 	"github.com/AntonZatsepilin/todo-app/internal/models"
-
 	"github.com/jmoiron/sqlx"
 )
 

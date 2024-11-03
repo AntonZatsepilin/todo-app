@@ -1,9 +1,8 @@
 package service
 
 import (
-	"TODO-APP/pkg/repository"
-
 	"github.com/AntonZatsepilin/todo-app/internal/models"
+	"github.com/AntonZatsepilin/todo-app/pkg/repository"
 )
 
 type Authorization interface {

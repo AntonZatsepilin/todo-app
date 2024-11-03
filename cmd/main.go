@@ -1,12 +1,13 @@
 package main
 
 import (
-	"TODO-APP/pkg/handler"
-	"TODO-APP/pkg/repository"
-	"TODO-APP/pkg/service"
 	"os"
 
-	"github.com/AntonZatsepilin/todo-app"
+	"github.com/AntonZatsepilin/todo-app/internal/models"
+	"github.com/AntonZatsepilin/todo-app/pkg/handler"
+	"github.com/AntonZatsepilin/todo-app/pkg/repository"
+	"github.com/AntonZatsepilin/todo-app/pkg/service"
+
 	"github.com/joho/godotenv"
 	"github.com/sirupsen/logrus"
 	"github.com/spf13/viper"
@@ -42,7 +43,7 @@ func main() {
 	services := service.NewService(repos)
 	handlers := handler.NewHandler(services)
 
-	srv := new(todo.Server)
+	srv := new(models.Server)
 	if err := srv.Run(viper.GetString("port"), handlers.InitRoutes()); err != nil {
 		logrus.Fatalf("error occured while running http server: %s", err.Error())
 	}
