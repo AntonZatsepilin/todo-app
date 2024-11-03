@@ -1,14 +1,15 @@
 package handler
 
 import (
-	todo "TODO-APP"
 	"net/http"
+
+	"github.com/AntonZatsepilin/todo-app/internal/models"
 
 	"github.com/gin-gonic/gin"
 )
 
 func (h *Handler) signUp(c *gin.Context) {
-	var input todo.User
+	var input models.User
 
 	if err := c.BindJSON(&input); err != nil {
 		newErrorResponse(c, http.StatusBadRequest, err.Error())

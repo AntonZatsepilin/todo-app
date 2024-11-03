@@ -1,10 +1,11 @@
 package service
 
 import (
-	todo "TODO-APP"
 	"TODO-APP/pkg/repository"
 	"crypto/sha1"
 	"fmt"
+
+	"github.com/AntonZatsepilin/todo-app/internal/models"
 )
 
 const salt = "efkdmce233123jewdcjefc"
@@ -17,7 +18,7 @@ func NewAuthService(repo repository.Authorization) *AuthService {
 	return &AuthService{repo: repo}
 }
 
-func (s *AuthService) CreateUser(user todo.User) (int, error) {
+func (s *AuthService) CreateUser(user models.User) (int, error) {
 	user.Password = s.generatePasswordHash(user.Password)
 	return s.repo.CreateUser(user)
 }

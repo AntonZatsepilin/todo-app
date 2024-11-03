@@ -1,12 +1,13 @@
 package service
 
 import (
-	todo "TODO-APP"
 	"TODO-APP/pkg/repository"
+
+	"github.com/AntonZatsepilin/todo-app/internal/models"
 )
 
 type Authorization interface {
-	CreateUser(user todo.User) (int, error)
+	CreateUser(user models.User) (int, error)
 }
 
 type TodoList interface {
