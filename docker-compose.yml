@@ -11,6 +11,12 @@ services:
     depends_on:
       db:
         condition: service_healthy
+    command: >
+      /bin/sh -c "
+      /usr/local/bin/migrate -path /app/schema -database postgres://postgres:postgres@db:5432/todo-db?sslmode=disable up &&
+      ./main
+      "
+
   db:
     image: postgres:latest
     container_name: postgres-db
