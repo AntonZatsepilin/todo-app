@@ -46,3 +46,6 @@ Make sure you have Docker and Docker Compose installed. Then run the following c
 ```
 docker-compose up --build
 ```
+
+### Step 3
+In order to check the database operation go to http://localhost:5050
