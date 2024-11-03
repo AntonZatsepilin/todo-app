@@ -4,7 +4,7 @@ Pet-project REST API
 
 ## Description
 
-This project is a REST API for managing todo lists. It is written in Go and uses PostgreSQL as the database. The project includes user authentication, creation, reading, updating, and deletion of todo lists and todo items.
+This project is a REST API for managing todo lists. It is written in Go and uses PostgreSQL and Docker. The project includes user authentication, creation, reading, updating, and deletion of todo lists and todo items.
 
 ## Project Structure
 
