@@ -26,6 +26,11 @@ func (h *Handler) createItem(c *gin.Context) {
 		return
 	}
 
+	if h.services == nil || h.services.TodoItem == nil {
+		newErrorResponse(c, http.StatusInternalServerError, "service is not initialized")
+		return
+	}
+
 	id, err := h.services.TodoItem.Create(userId, listId, input)
 	if err != nil {
 		newErrorResponse(c, http.StatusInternalServerError, err.Error())
