@@ -20,6 +20,7 @@ type TodoList interface {
 
 type TodoItem interface {
 	Create(listId int, item models.TodoItem) (int, error)
+	GetAll(listId int) ([]models.TodoItem, error)
 }
 
 type Repository struct {
