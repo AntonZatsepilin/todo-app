@@ -7,10 +7,10 @@ import (
 	"os"
 	"time"
 
-	"github.com/AntonZatsepilin/todo-app/pkg/repository"
 	"github.com/golang-jwt/jwt"
 
 	"github.com/AntonZatsepilin/todo-app/internal/models"
+	"github.com/AntonZatsepilin/todo-app/internal/repository"
 )
 
 var salt = os.Getenv("SALT")

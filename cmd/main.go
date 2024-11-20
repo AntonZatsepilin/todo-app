@@ -6,11 +6,10 @@ import (
 	"os/signal"
 	"syscall"
 
+	"github.com/AntonZatsepilin/todo-app/internal/handler"
 	"github.com/AntonZatsepilin/todo-app/internal/models"
-	"github.com/AntonZatsepilin/todo-app/pkg/handler"
-	"github.com/AntonZatsepilin/todo-app/pkg/repository"
-	"github.com/AntonZatsepilin/todo-app/pkg/service"
-
+	"github.com/AntonZatsepilin/todo-app/internal/repository"
+	"github.com/AntonZatsepilin/todo-app/internal/service"
 	"github.com/joho/godotenv"
 	"github.com/sirupsen/logrus"
 	"github.com/spf13/viper"

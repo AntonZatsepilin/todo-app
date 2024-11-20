@@ -2,7 +2,7 @@ package service
 
 import (
 	"github.com/AntonZatsepilin/todo-app/internal/models"
-	"github.com/AntonZatsepilin/todo-app/pkg/repository"
+	"github.com/AntonZatsepilin/todo-app/internal/repository"
 )
 
 type TodoItemService struct {
