@@ -20,7 +20,10 @@ type TodoList interface {
 
 type TodoItem interface {
 	Create(listId int, item models.TodoItem) (int, error)
-	GetAll(listId int) ([]models.TodoItem, error)
+	GetAll(userId, listId int) ([]models.TodoItem, error)
+	GetById(userId, itemId int) (models.TodoItem, error)
+	Delete(userId, itemId int) error
+	Update(userId, itemId int, input models.UpdateItemInput) error
 }
 
 type Repository struct {
