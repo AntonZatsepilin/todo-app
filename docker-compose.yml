@@ -49,6 +49,17 @@ services:
     ports:
       - "5050:80"
 
+  swagger:
+    image: swaggerapi/swagger-ui
+    container_name: swagger-ui
+    ports:
+      - "8081:8080"
+    environment:
+      SWAGGER_JSON: /swagger/swagger.json
+    volumes:
+      - ./docs:/swagger
+    depends_on:
+      - go-app
 volumes:
   postgres_data:
   pgadmin:
